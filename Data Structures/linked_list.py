@@ -78,11 +78,30 @@ class LinkedList:
       left_node.next_node = node
     else:
       self.head = node
-    
-    if right_node is not None:
-      node.next_node = right_node
-    else:
+
+    node.next_node = right_node
+    if right_node is None:
       self.tail = node
+      
+  def remove(self, key):
+    current = self.head
+    previous = None
+    found = False
+    
+    while current is not None and not found:
+      if current.data == key:
+        found = True
+      else:
+        previous = current
+      current = current.next_node
+        
+    if previous is None:
+      self.head = current
+    elif current is None:
+      previous.next_node = None
+      self.tail = previous
+    else:
+      previous.next_node = current
     
   def __repr__(self):
     """
@@ -123,4 +142,7 @@ print(l)
 print(l.search(1))
 l.insert(4, 0)
 l.insert(0, 4)
+print(l)
+l.remove(4)
+l.remove(0)
 print(l)
