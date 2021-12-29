@@ -58,6 +58,30 @@ class LinkedList:
       current = current.next_node
      
     return None
+  
+  def insert(self, data, index):
+    """
+    Inserts a node with the value of data into index position of the linked list
+    Time complexity: O(n)
+    """
+    
+    node = Node(data)
+    
+    right_node = self.head
+    left_node = None
+    for i in range(index):
+      left_node = right_node
+      right_node = right_node.next_node
+    
+    if left_node is not None:
+      left_node.next_node = node
+    else:
+      self.head = node
+    
+    if right_node is not None:
+      node.next_node = right_node
+    else:
+      self.tail = node
     
   def __repr__(self):
     """
@@ -96,3 +120,6 @@ l.add(3)
 print(l.size())
 print(l)
 print(l.search(1))
+l.insert(4, 0)
+l.insert(0, 4)
+print(l)
