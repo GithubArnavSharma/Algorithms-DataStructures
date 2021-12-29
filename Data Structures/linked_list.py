@@ -38,3 +38,7 @@ class LinkedList:
 N1 = Node(10)
 N2 = Node(20)
 N1.next_node = N2
+
+l = LinkedList()
+l.head = Node(10)
+print(l.size())
