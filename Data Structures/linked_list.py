@@ -62,7 +62,8 @@ class LinkedList:
   def insert(self, data, index):
     """
     Inserts a node with the value of data into index position of the linked list
-    Time complexity: O(n)
+    Finding index: O(n)
+    Insertion: O(1)
     """
     
     node = Node(data)
