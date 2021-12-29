@@ -84,7 +84,14 @@ class LinkedList:
       self.tail = node
       
   def remove(self, key):
+    """
+    Removes node containing data that matches the key
+    Returns the node or None if the key doesn't exist
+    Time Complexity: O(n)
+    """
+    
     current = self.head
+    removed_node = None
     previous = None
     found = False
     
