@@ -85,7 +85,6 @@ class LinkedList:
       
   def remove(self, key):
     current = self.head
-    removed_node = None
     previous = None
     found = False
     
