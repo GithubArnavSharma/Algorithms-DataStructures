@@ -44,6 +44,21 @@ class LinkedList:
     new_node.next_node = self.head
     self.head = new_node
     
+  def search(self, key):
+    """
+    Returns the node in the linked list with the data of key
+    Time Complexity: O(n)
+    """
+    
+    current = self.head
+    
+    while current:
+      if current.data == key:
+        return current
+      current = current.next_node
+     
+    return None
+    
   def __repr__(self):
     """
     Returns a string representing the list
@@ -80,3 +95,4 @@ l.add(2)
 l.add(3)
 print(l.size())
 print(l)
+print(l.search(1))
