@@ -97,11 +97,10 @@ class LinkedList:
         
     if previous is None:
       self.head = current
-    elif current is None:
-      previous.next_node = None
-      self.tail = previous
     else:
       previous.next_node = current
+      if current is None:
+        self.tail = previous
     
   def __repr__(self):
     """
