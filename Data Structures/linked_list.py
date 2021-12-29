@@ -85,11 +85,13 @@ class LinkedList:
       
   def remove(self, key):
     current = self.head
+    removed_node = None
     previous = None
     found = False
     
     while current is not None and not found:
       if current.data == key:
+        removed_node = current
         found = True
       else:
         previous = current
@@ -101,6 +103,8 @@ class LinkedList:
       previous.next_node = current
       if current is None:
         self.tail = previous
+        
+    return removed_node
     
   def __repr__(self):
     """
