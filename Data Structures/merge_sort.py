@@ -54,3 +54,4 @@ def merge_sort(the_list):
   
   return merge(left, right)
 
+print(merge_sort([4,5,2,4,5,23,2,4]))
