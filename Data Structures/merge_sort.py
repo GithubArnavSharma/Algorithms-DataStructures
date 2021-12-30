@@ -2,6 +2,7 @@ def split(the_list):
   """
   Divide the un-sorted list at midpoint into sublists
   Returns the left and right sub-lists
+  Overall Time Complexity: O(log n)
   """
   
   midpoint = len(the_list)//2
@@ -14,6 +15,7 @@ def merge(left, right):
   """
   Merges two lists and sorts them
   Returns the merged list
+  Overall Time Complexity: O(n)
   """
   
   merged = []
@@ -43,6 +45,8 @@ def merge_sort(the_list):
   1. Divide - Find the midpoint of the list and divide into sub-lists
   2. Conquer - Recursively sort the sub-lists created in step 1
   3. Combine - Merge the recursively sorted sub-listed from step 2
+  
+  Time Complexity: O(n log n)
   """
   
   if len(the_list) <= 1:
