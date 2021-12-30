@@ -48,10 +48,16 @@ def merge_sort(the_list):
   if len(the_list) <= 1:
     return the_list
   
-  left_half, right_half = split(list)
+  left_half, right_half = split(the_list)
   left = merge_sort(left_half)
   right = merge_sort(right_half)
   
   return merge(left, right)
+
+def verify_sorted(the_list):
+  if len(the_list) <= 1:
+    return True
+  
+  return the_list[0] <= the_list[1] and verify_sorted(the_list[1:])
 
 print(merge_sort([4,5,2,4,5,23,2,4]))
