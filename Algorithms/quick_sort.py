@@ -4,7 +4,7 @@ def quick_sort(the_list):
   
   less_pivot = []
   more_pivot = []
-  pivot = the_list[0]
+  pivot = the_list[random.randint(0, len(the_list)-1)]
   
   for value in the_list[1:]:
     if value <= pivot:
