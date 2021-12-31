@@ -1,3 +1,5 @@
+import random
+
 def quick_sort(the_list):
   if len(the_list) <= 1:
     return the_list
